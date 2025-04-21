@@ -1,0 +1,15 @@
+app = "motioneye-fly"
+
+[env]
+
+[[services]]
+  internal_port = 8765
+  protocol = "tcp"
+
+  [[services.ports]]
+    handlers = ["http"]
+    port = 80
+
+  [[services.ports]]
+    handlers = ["tls", "http"]
+    port = 443
